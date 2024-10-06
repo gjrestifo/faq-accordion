@@ -2,6 +2,7 @@
     font-family: 'Work Sans';
     src: url('./assets/fonts/WorkSans-VariableFont_wght.ttf');
 }
+
 body {
     background-color: hsl(275, 100%, 97%);
     background-image: url("./assets/images/background-pattern-desktop.svg");
@@ -15,32 +16,40 @@ body {
     align-items: center;
     font-family: 'Work Sans';
 }
+
 h2 {
     color: hsl(292, 42%, 14%);
-    font-size: medium;
+    font-size: 20px;
     margin-right: 25px;
 }
+
 h2:hover {
     color: rgb(173, 40, 235)
 }
+
 p {
     font-size: 16px;
     font-weight: 400;
 }
+
 .card {
+    margin-top: 100px;
     background-color: white;
     max-width: 500px;
     display: flex;
     flex-direction: column;
     padding: 24px;
+    padding-bottom: 50px;
     justify-content: center;
     align-items: left;
     border-radius: 20px;
 }
+
 .title {
     display: flex;
     flex-direction: row;
 }
+
 .accordion-toggle {
     background-image: url("./assets/images/icon-plus.svg");
     background-size: cover;
@@ -49,8 +58,12 @@ p {
     height: 30px;
     border: none;
     background-color: transparent;
-
 }
+
+.accordion-toggle.clicked {
+    background-image: url("./assets/images/icon-minus.svg");
+}
+
 .accordion-label {
     display: flex;
     flex-direction: row;
@@ -58,20 +71,23 @@ p {
     justify-content: space-between;
 
 }
+
 .accordion-content {
     display: none;
-    /* max-height: 0; */
-    /* overflow: hidden; */
-    /* transition: max-height 0.3s ease-out; */
+    color: hsl(292, 16%, 49%);
+    border-bottom: 1px solid hsl(275, 100%, 97%);
+    border-collapse: collapse;
 }
+
 .accordion-content.show {
     display: block;
-    /* max-height: 200px; */
 }
+
 .attribution {
     font-size: 11px;
     text-align: center;
-  }
-  .attribution a {
+}
+
+.attribution a {
     color: hsl(228, 45%, 44%);
-  }
+}
